@@ -1,17 +1,17 @@
-var Car = (function () {
-    function Car(engine) {
+var Car2 = (function () {
+    function Car2(engine) {
         this.engine = engine;
     }
-    Car.prototype.start = function () {
+    Car2.prototype.start = function () {
         alert("Engine started: " + this.engine);
     };
-    Car.prototype.stop = function () {
+    Car2.prototype.stop = function () {
         alert("Engine stopped: " + this.engine);
     };
-    return Car;
+    return Car2;
 })();
 window.onload = function () {
-    var car = new Car('V8');
+    var car = new Car2('V8');
     car.start();
     car.stop();
 };

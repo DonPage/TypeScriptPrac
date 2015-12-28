@@ -1,21 +1,32 @@
-class Car {
-    engine: string;
+class Engine {
+    constructor(public housePower: number,
+                public engineType: string) {}
+}
 
-    constructor(engine:string) {
+class Car {
+    private _engine: Engine;
+
+    constructor(engine: Engine) {
         this.engine = engine;
     }
 
-    start() {
-        alert(`Engine started: ${this.engine}`)
+    get engine() : Engine {
+        return this._engine;
     }
 
-    stop() {
-        alert(`Engine stopped: ${this.engine}`)
+    set engine(value: Engine) {
+        if (!value) throw 'Please supply an engine';
+        this._engine = value;
+    }
+
+    start() {
+        alert(`Car engine started ${this._engine.engineType}`);
     }
 }
 
 window.onload = function () {
-    var car = new Car('V8');
+    var engine = new Engine(300, 'v8');
+    var car = new Car(engine);
+    alert(car.engine.engineType);
     car.start();
-    car.stop();
 };
