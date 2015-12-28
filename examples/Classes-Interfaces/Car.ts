@@ -1,9 +1,13 @@
+interface IEngine {
+    start();
+
+}
 class Engine {
     constructor(public housePower: number,
                 public engineType: string) {}
 }
 
-class Car {
+class Car implements IEngine{
     private _engine: Engine;
 
     constructor(engine: Engine) {
