@@ -20,3 +20,12 @@ Notes from TypeScript Fundamentals Course
 | `:`                       | Separator between variable/parameter names and types |
 
 
+## TypeScript Class Members
+
+| Keyword                   | Description |
+| :------------------------ | :----------------------------------------------- |
+| `Fields`                   | Variables. |
+| `constructor`             | Init an object. Starter data. |
+| `Properties`                 | Get or Set field values. Act as filters |
+| `Functions`                   | Something you want to perform |
+
